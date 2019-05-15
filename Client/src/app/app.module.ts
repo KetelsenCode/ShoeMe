@@ -12,6 +12,7 @@ import { ListShoesComponent } from './list-shoes/list-shoes.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AlertifyService } from './services/alertify.services';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserDetailResolver } from './resolvers/user-details.resolver.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthService, ErrorInterceptorProvider, AlertifyService],
+  providers: [AuthService, ErrorInterceptorProvider, AlertifyService, UserDetailResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

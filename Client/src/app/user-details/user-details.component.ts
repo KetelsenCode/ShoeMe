@@ -13,11 +13,6 @@ export class UserDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private AuthService: AuthService, private AlertifyService: AlertifyService) { }
 
   ngOnInit() {
-    //Using + to cast it as an int
-    this.AuthService.getUser(+this.route.snapshot.params['id']).subscribe((res) => {
-      this.user = res;
-      console.log(res);
-      
-    }, err => this.AlertifyService.error(err));
+    this.user = this.route.snapshot.data;
   }
 }
