@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoeMe.Identity.API.Data;
 
 namespace ShoeMe.Identity.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -15,14 +17,15 @@ namespace ShoeMe.Identity.API.Controllers
         public ValuesController(IdentityContext context)
         {
             _context = context;
+            
 
         }
         // GET api/values
         [HttpGet]
         public IActionResult Get()
         {
-            var user = _context.Users.FirstOrDefault();
-            return Ok(user);
+            var users = _context.Users;
+            return Ok(users);
         }
 
         // GET api/values/5
