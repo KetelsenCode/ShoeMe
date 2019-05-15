@@ -1,0 +1,6 @@
+Mangler på Identity:
+
+Sæt op detail-page.
+Konfigurer automapper så UserDetailsDTO har adresse, by, post etc og User har et object med Address med alle properties. 
+
+Tror vi er klar til at sætte op cataloget efter. 

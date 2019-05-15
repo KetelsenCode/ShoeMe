@@ -10,9 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserDetailsComponent implements OnInit {
   user: any = {}
-  constructor(private route: ActivatedRoute, private AuthService: AuthService, private AlertifyService: AlertifyService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.user = this.route.snapshot.data;
+    //Data from the resolver - userdetails
+    this.user = this.route.snapshot.data.data;
   }
 }

@@ -3,6 +3,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -17,10 +19,12 @@ namespace ShoeMe.Identity.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _config;
+        private readonly IMapper _mapper;
 
         private readonly IAuthRepository _rep;
-        public AuthController(IAuthRepository rep, IConfiguration config)
+        public AuthController(IAuthRepository rep, IConfiguration config, IMapper mapper)
         {
+            _mapper = mapper;
             _config = config;
             _rep = rep;
         }
@@ -63,7 +67,7 @@ namespace ShoeMe.Identity.API.Controllers
 
             // Signing credentials 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
-            
+
             // Security Token DEscripter
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -81,16 +85,19 @@ namespace ShoeMe.Identity.API.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
             // Return actual token
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenHandler.WriteToken(token)
             });
         }
+        [Authorize]
         [HttpGet("user-details/{id}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             var userFromRepo = await _rep.GetUser(id);
 
-            return Ok(userFromRepo);
+            var userDetailDTO = _mapper.Map<UserForDetailtsDto>(userFromRepo);
+            return Ok(userDetailDTO);
         }
 
     }

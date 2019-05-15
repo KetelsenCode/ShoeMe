@@ -13,6 +13,7 @@ import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AlertifyService } from './services/alertify.services';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserDetailResolver } from './resolvers/user-details.resolver.service';
+import { UserOrdersComponent } from './user-orders/user-orders.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserDetailResolver } from './resolvers/user-details.resolver.service';
     NavbarComponent,
     RegisterComponent,
     ListShoesComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserOrdersComponent
   ],
   imports: [
     BrowserModule,
