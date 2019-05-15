@@ -4,3 +4,17 @@ Sæt op detail-page.
 Konfigurer automapper så UserDetailsDTO har adresse, by, post etc og User har et object med Address med alle properties. 
 
 Tror vi er klar til at sætte op cataloget efter. 
+
+Andre ting: 
+Microservices! Add CQRS & Aggregates. Læs: "Developing transactional microservices" @ uge13 @ Ole. 
+Eksempel på value objekts: https://stackoverflow.com/questions/46015377/howto-map-value-object-in-entity-framework-core-2-0
+
+Sæt op myOrders - samme metode som user-details med id som parameter
+
+
+RabbitMQ:
+https://aspnetmonsters.com/2017/03/2017-03-18-RabbitMQ%20from%20ASP/
+https://kodebenny.dk/aspnet_core/foerste_kig_paa_rabbitmq/
+https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice
+bedste:
+http://gigi.nullneuron.net/gigilabs/reading-rabbitmq-settings-using-net-core-configuration/

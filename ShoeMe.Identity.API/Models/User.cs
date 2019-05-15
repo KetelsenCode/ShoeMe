@@ -24,6 +24,5 @@ namespace ShoeMe.Identity.API.Models
         public int PostCode { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-
     }
 }

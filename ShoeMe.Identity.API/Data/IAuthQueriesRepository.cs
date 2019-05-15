@@ -3,11 +3,9 @@ using ShoeMe.Identity.API.Models;
 
 namespace ShoeMe.Identity.API.Data
 {
-    public interface IAuthRepository
+    public interface IAuthQueriesRepository
     {
-        Task<User> Register(User user, string password);
         Task<User> Login(string username, string password);
-        Task<bool> UserExists(string username);
         Task<User> GetUser(int id);
     }
 }

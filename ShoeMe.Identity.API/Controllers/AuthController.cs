@@ -20,10 +20,12 @@ namespace ShoeMe.Identity.API.Controllers
     {
         private readonly IConfiguration _config;
         private readonly IMapper _mapper;
+        private readonly IAuthQueriesRepository _qrepo;
 
-        private readonly IAuthRepository _rep;
-        public AuthController(IAuthRepository rep, IConfiguration config, IMapper mapper)
+        private readonly IAuthCommandRepository _rep;
+        public AuthController(IAuthCommandRepository rep, IAuthQueriesRepository qrepo, IConfiguration config, IMapper mapper)
         {
+            _qrepo = qrepo;
             _mapper = mapper;
             _config = config;
             _rep = rep;
@@ -48,7 +50,7 @@ namespace ShoeMe.Identity.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto user)
         {
-            var userFromRepo = await _rep.Login(user.Username, user.Password);
+            var userFromRepo = await _qrepo.Login(user.Username, user.Password);
             //IF no user found in db
             if (userFromRepo == null)
                 //Return unauth so if user have wrong login creds, we're not specifying if it's password or username
@@ -94,10 +96,10 @@ namespace ShoeMe.Identity.API.Controllers
         [HttpGet("user-details/{id}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
-            var userFromRepo = await _rep.GetUser(id);
+            var userFromRepo = await _qrepo.GetUser(id);
 
             var userDetailDTO = _mapper.Map<UserForDetailtsDto>(userFromRepo);
-            return Ok(userDetailDTO);
+            return Ok(userFromRepo);
         }
 
     }
