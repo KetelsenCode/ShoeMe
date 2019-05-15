@@ -1,0 +1,14 @@
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\bin\Debug\netcoreapp2.2\ShoeMe.Identity.API.deps.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\bin\Debug\netcoreapp2.2\ShoeMe.Identity.API.runtimeconfig.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\bin\Debug\netcoreapp2.2\ShoeMe.Identity.API.runtimeconfig.dev.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\bin\Debug\netcoreapp2.2\ShoeMe.Identity.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\bin\Debug\netcoreapp2.2\ShoeMe.Identity.API.pdb
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.csprojAssemblyReference.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.csproj.CoreCompileInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.RazorAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.RazorAssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.AssemblyInfoInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.AssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.RazorTargetAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\ShoeMe.Identity.API\obj\Debug\netcoreapp2.2\ShoeMe.Identity.API.pdb
