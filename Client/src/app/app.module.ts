@@ -11,13 +11,15 @@ import { appRoutes } from './routes';
 import { ListShoesComponent } from './list-shoes/list-shoes.component';
 import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { AlertifyService } from './services/alertify.services';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     RegisterComponent,
-    ListShoesComponent
+    ListShoesComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

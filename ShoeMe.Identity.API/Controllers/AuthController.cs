@@ -85,6 +85,13 @@ namespace ShoeMe.Identity.API.Controllers
                 token = tokenHandler.WriteToken(token)
             });
         }
+        [HttpGet("user-details/{id}")]
+        public async Task<IActionResult> GetUser([FromRoute] int id)
+        {
+            var userFromRepo = await _rep.GetUser(id);
+
+            return Ok(userFromRepo);
+        }
 
     }
 

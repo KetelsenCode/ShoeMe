@@ -24,11 +24,10 @@ export class AuthService {
         return this.HttpClient.post('http://localhost:5000/api/auth/register', user);
     }
 
-    getValue() {
+    getUser(id) {
         let token = localStorage.getItem('token');
         let headers: HttpHeaders = new HttpHeaders();
-        console.log(token);
         headers = headers.append('Authorization','Bearer ' + token);
-        return this.HttpClient.get('http://localhost:5000/api/values', {headers});
+        return this.HttpClient.get('http://localhost:5000/api/auth/user-details/' + id,  {headers});
     }
 }

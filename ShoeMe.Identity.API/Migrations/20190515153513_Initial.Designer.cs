@@ -10,7 +10,7 @@ using ShoeMe.Identity.API.Data;
 namespace ShoeMe.Identity.API.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20190515095250_Initial")]
+    [Migration("20190515153513_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,9 +27,25 @@ namespace ShoeMe.Identity.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<DateTime>("DateOfBirth");
+
+                    b.Property<DateTime>("LastLogin");
+
                     b.Property<byte[]>("PasswordHash");
 
                     b.Property<byte[]>("PasswordSalt");
+
+                    b.Property<int>("PostCode");
+
+                    b.Property<string>("StreetName");
+
+                    b.Property<string>("StreetNr");
 
                     b.Property<string>("Username");
 

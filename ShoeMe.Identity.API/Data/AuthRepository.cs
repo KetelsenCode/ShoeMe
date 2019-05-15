@@ -80,5 +80,17 @@ namespace ShoeMe.Identity.API.Data
 
             return false;
         }
+
+        public async Task<User> GetUser(int id)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            
+            if (user == null)
+            {
+                return null;
+            }
+
+            return user;
+        }
     }
 }

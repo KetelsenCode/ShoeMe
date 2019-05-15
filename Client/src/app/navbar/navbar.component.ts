@@ -27,6 +27,7 @@ export class NavbarComponent implements OnInit {
     this.AuthService.login(this.user).subscribe((token: any )=> { 
                     localStorage.setItem('token', token.token)
                     this.decodedToken = this.jwtHelper.decodeToken(token.token);
+                    console.log(this.decodedToken.nameid);
                     this.Alertify.success('User succesfully logged in!');
                  }, 
       err => { this.Alertify.error("Username or password incorrect") });
@@ -43,8 +44,6 @@ export class NavbarComponent implements OnInit {
   loggedIn() {
     return this.AuthService.loggedIn();
   }
-  getValue() {
-    this.AuthService.getValue().subscribe(i => console.log(i));
-  }
+
 
 }

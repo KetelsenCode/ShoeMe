@@ -25,9 +25,29 @@ namespace ShoeMe.Identity.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<DateTime>("DateOfBirth");
+
+                    b.Property<DateTime>("LastLogin");
+
+                    b.Property<string>("Mail");
+
                     b.Property<byte[]>("PasswordHash");
 
                     b.Property<byte[]>("PasswordSalt");
+
+                    b.Property<int>("PhoneNumber");
+
+                    b.Property<int>("PostCode");
+
+                    b.Property<string>("StreetName");
+
+                    b.Property<string>("StreetNr");
 
                     b.Property<string>("Username");
 
