@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using ShoeMe.Identity.API.Data;
+using ShoeMe.Identity.API.Helpers;
 
 namespace ShoeMe.Identity.API
 {
@@ -56,9 +60,30 @@ namespace ShoeMe.Identity.API
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 //app.UseHsts();
+                app.UseExceptionHandler(builder => {
+                    //context = related to http request and response header
+                    builder.Run(async context => {
+                        //Adds statuscode to responseheader
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        
+                        //Stores the particular error 
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+                        if (error != null){
+                            //Adds the Application-Error message to the response header. AddApplicationError is a static class created in Helpers/Extensions
+                            context.Response.AddApplicationError(error.Error.Message);
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
+                });
             }
 
             //app.UseHttpsRedirection();
+              app.UseCors(builder => builder
+                  .WithOrigins("http://127.0.0.1:8887", "http://localhost:4200", "*")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials()
+                  .WithHeaders("Accept", "Content-Type", "Origin", "X-My-Header"));
             app.UseAuthentication();
             app.UseMvc();
         }

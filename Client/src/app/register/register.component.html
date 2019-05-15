@@ -1,0 +1,9 @@
+
+
+<form #registerForm="ngForm" (ngSubmit)="register()">
+  <input type="text" class="form-inline my-2 my-lg-0" placeholder="username" 
+        name="username" [(ngModel)]="user.username">
+  <input type="password" class="form-inline my-2 my-lg-0" placeholder="password" 
+        name="password"  [(ngModel)]="user.password">
+  <button type="submit" class="btn btn-success my-2 my-sm-0" ></button>
+</form>
