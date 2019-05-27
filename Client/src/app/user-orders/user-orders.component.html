@@ -1,3 +1,31 @@
-<p>
-  user-orders works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let item of Cart.items">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.productName }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity}}</td>
+      <td>{{ item.totalPrice }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Contact Info</h2>
+<ul class="list-group">
+  <li class="list-group-item">StreetName: {{ user.streetName }}</li>
+  <li class="list-group-item">StreetNr: {{ user.streetNr }}</li>
+  <li class="list-group-item">City: {{ user.city }}</li>
+  <li class="list-group-item">PostCode: {{ user.postCode }}</li>
+  <li class="list-group-item">Country: {{ user.country }}</li>
+  <li class="list-group-item">Full Price: {{ totalPrice }} DKK</li>
+</ul>
+
+<button type="submit" class="btn btn-primary" (click)="order()">Add To Order</button>

@@ -1,0 +1,14 @@
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\bin\Debug\netcoreapp2.2\ShoeMe.Catalog.API.deps.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\bin\Debug\netcoreapp2.2\ShoeMe.Catalog.API.runtimeconfig.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\bin\Debug\netcoreapp2.2\ShoeMe.Catalog.API.runtimeconfig.dev.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\bin\Debug\netcoreapp2.2\ShoeMe.Catalog.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\bin\Debug\netcoreapp2.2\ShoeMe.Catalog.API.pdb
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.csprojAssemblyReference.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.csproj.CoreCompileInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.RazorAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.RazorAssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.AssemblyInfoInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.AssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.RazorTargetAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.catalog.api\obj\Debug\netcoreapp2.2\ShoeMe.Catalog.API.pdb

@@ -1,3 +1,11 @@
-<p>
-  list-shoes works!
-</p>
+<div class="row">
+    <div class="card" *ngFor="let item of items">
+        <div class="card-body text-center" style="max-width: 200px;">
+            <p><img class=" img-fluid" src="{{ item.photo }}" alt="card image"></p>
+            <h4 class="card-title">{{ item.name }}</h4>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="card-text">{{ item.price }}</p>
+            <a (click)="addItemToCart(item)" class="btn btn-success btn-sm"><i class="fa fa-plus">Add to cart</i></a>
+        </div>
+    </div>
+</div>

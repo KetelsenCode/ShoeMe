@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { JwtHelperService} from '@auth0/angular-jwt'
+import { User } from '../models/user';
 @Injectable({
     providedIn: 'root'
 })
@@ -29,5 +30,13 @@ export class AuthService {
         let headers: HttpHeaders = new HttpHeaders();
         headers = headers.append('Authorization','Bearer ' + token);
         return this.HttpClient.get('http://localhost:5000/api/auth/user-details/' + id,  {headers});
+    }
+
+    changeDetails(user: User)
+    {
+        let token = localStorage.getItem('token');
+        let headers: HttpHeaders = new HttpHeaders();
+        headers = headers.append('Authorization','Bearer ' + token);        
+        return this.HttpClient.put('http://localhost:5000/api/auth/user-details/' + user.id, user,  {headers})
     }
 }

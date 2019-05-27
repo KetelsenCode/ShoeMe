@@ -1,0 +1,14 @@
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.csprojAssemblyReference.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.csproj.CoreCompileInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.RazorAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.RazorAssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.AssemblyInfoInputs.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.AssemblyInfo.cs
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\bin\Debug\netcoreapp2.2\ShoeMe.Cart.API.deps.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\bin\Debug\netcoreapp2.2\ShoeMe.Cart.API.runtimeconfig.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\bin\Debug\netcoreapp2.2\ShoeMe.Cart.API.runtimeconfig.dev.json
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\bin\Debug\netcoreapp2.2\ShoeMe.Cart.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\bin\Debug\netcoreapp2.2\ShoeMe.Cart.API.pdb
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.RazorTargetAssemblyInfo.cache
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.dll
+C:\Users\Kent\Desktop\Coding\apps\ShoeMe\shoeme.cart.api\obj\Debug\netcoreapp2.2\ShoeMe.Cart.API.pdb

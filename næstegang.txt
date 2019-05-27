@@ -18,3 +18,7 @@ https://kodebenny.dk/aspnet_core/foerste_kig_paa_rabbitmq/
 https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice
 bedste:
 http://gigi.nullneuron.net/gigilabs/reading-rabbitmq-settings-using-net-core-configuration/
+
+Per & SQL
+Husk begrebet triggers & constraints. 
+Deny deletion! GOOGLE

@@ -99,9 +99,15 @@ namespace ShoeMe.Identity.API.Controllers
             var userFromRepo = await _qrepo.GetUser(id);
 
             var userDetailDTO = _mapper.Map<UserForDetailtsDto>(userFromRepo);
-            return Ok(userFromRepo);
+            return Ok(userDetailDTO);
         }
-
+        [Authorize]
+        [HttpPut("user-details/{id}")]
+        public async Task<IActionResult> UpdateUser(UserForDetailtsDto user)
+        {
+            var existingUser = await _rep.UpdateUser(user);
+            return Ok(existingUser);
+        }
     }
 
 }

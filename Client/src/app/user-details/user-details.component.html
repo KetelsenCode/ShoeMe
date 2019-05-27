@@ -2,5 +2,51 @@
   user-details works!
 </p>
 
-<p>{{ user.username }} </p>
-<p>{{ user.phoneNumber }} </p>
+<form [formGroup]="registerForm" (ngSubmit)="changeDetails()">
+  <h2 class="text-center text-primary">Details</h2>
+  <hr>
+
+  <div class="form-group">
+    <label>Birthday</label>
+    <input type="date" class="form-control" formControlName="birthday" placeholder="birthday">
+  </div>
+
+  <div class="form-group">
+    <label>Mail</label>
+    <input type="email" class="form-control" formControlName="email" placeholder="email">
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="text" class="form-control" formControlName="phone" placeholder="phone">
+  </div>
+
+  <div class="form-group">
+    <label>StreetName</label>
+    <input type="text" class="form-control" formControlName="streetName" placeholder="streetname">
+  </div>
+
+  <div class="form-group">
+    <label>StreetNumber</label>
+    <input type="text" class="form-control" formControlName="streetNr" placeholder="streetNr">
+  </div>
+
+  <div class="form-group">
+    <label>PostCode</label>
+    <input type="text" class="form-control" formControlName="postCode" placeholder="postcode">
+  </div>
+
+  <div class="form-group">
+    <label>City</label>
+    <input type="text" class="form-control" formControlName="city" placeholder="city">
+  </div>
+
+  <div class="form-group">
+    <label>Country</label>
+    <input type="text" class="form-control" formControlName="country" placeholder="county">
+  </div>
+
+  <div class="form-group text-center">
+    <button type="submit">Save</button>
+  </div>
+</form>

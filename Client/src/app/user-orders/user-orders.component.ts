@@ -1,4 +1,7 @@
-import { ActivatedRoute } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { AuthService } from './../services/auth.service';
+import { CartService } from './../services/cart.service';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +10,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-orders.component.css']
 })
 export class UserOrdersComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute) { }
+  Cart: any = {};
+  totalPrice: number = 0;
+  userId;
+  user: any = {};
+  helper = new JwtHelperService();
+  constructor(private route: ActivatedRoute, private AuthService: AuthService) { }
 
   ngOnInit() {
-    //We use ActivatedRoute cause it's a static route whereas ActivatedRouteSnapshot returns an observable so we can subscribe. Useful if url changes on same component
-    //Fix this so it gets from order API with id as parameter. 
-    let userIdParam = this.route.snapshot.paramMap.get("id");
-    console.log(userIdParam);
-  }
+    //Gets users cart from resolver
+    this.Cart = this.route.snapshot.data.data
+
+    //Add a totalPrice attribute on item and populate it - afterwards populate full totalPrice (not pr item)
+    this.Cart.items.forEach(item => {
+      item.totalPrice = item.quantity * item.price;
+      this.totalPrice += item.totalPrice;
+    });
+
+    //Get user from resolver
+    this.user = this.route.snapshot.data.user;
+ }
+
+ order() {
+   let newOrder: any = {};
+   newOrder.user = this.user;
+   newOrder.items = this.Cart.items;
+   console.log("Successfully ordered to " + newOrder.user.username);
+
+ }
 
 }
