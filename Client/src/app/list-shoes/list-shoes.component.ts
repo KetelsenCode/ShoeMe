@@ -22,9 +22,11 @@ export class ListShoesComponent implements OnInit {
     if (this.AuthService.loggedIn()) {
       this.CartService.getCartOnStart().subscribe(res => this.cart = res);
     }
+
+    //Get catalog items on load
     this.CatalogService.getItems().subscribe((res: any) => this.items = res);
   }
-
+  
   addItemToCart(item: Item)
   {
       var cartItem: CartItem = {

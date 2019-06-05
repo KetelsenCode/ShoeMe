@@ -53,7 +53,11 @@ namespace ShoeMe.Identity.API.Data
 
         public async Task<UserForDetailtsDto> UpdateUser(UserForDetailtsDto user)
         {
-            var existingUser = await _context.Users.Where(u => u.Id == user.Id).FirstOrDefaultAsync();            if (existingUser != null)
+            //Find user in system
+            var existingUser = await _context.Users.Where(u => u.Id == user.Id).FirstOrDefaultAsync();     
+
+            //Update found user with new details       
+            if (existingUser != null)
             {
                 existingUser.DateOfBirth = user.DateOfBirth;
                 existingUser.Mail = user.Mail;

@@ -23,4 +23,9 @@ export class CartService {
   {
     return this.HttpClient.post('http://localhost:5006/api/cart/addItem', item);
   } 
+
+  removeItem(id)
+  {
+    return this.HttpClient.post('http://localhost:5006/api/cart/removeItem', id)
+  }
 }

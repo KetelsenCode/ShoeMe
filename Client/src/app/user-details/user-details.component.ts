@@ -14,15 +14,15 @@ import { DatePipe } from '@angular/common'
 export class UserDetailsComponent implements OnInit {
   user: User;
   registerForm: FormGroup;
-  constructor(private route: ActivatedRoute, private AuthService: AuthService, private datepipe: DatePipe) { }
+  constructor(private route: ActivatedRoute, private AuthService: AuthService, private datepipe: DatePipe, private AlertifyService: AlertifyService) { }
 
   ngOnInit() {
     
     //Data from the resolver - userdetails
     this.user = this.route.snapshot.data.data;
-
+    
     //Can't get date to autifill
-    var date = this.datepipe.transform(this.user.dateOfBirth, 'dd-MM-yyyy')
+    var date = this.datepipe.transform(this.user.dateOfBirth, 'yyyy-MM-dd')
     this.registerForm = new FormGroup({
         birthday: new FormControl(date),
         email: new FormControl(this.user.mail),
@@ -52,6 +52,6 @@ export class UserDetailsComponent implements OnInit {
       country: this.registerForm.get('country').value,
       createdAt: Date.now()
     }
-    this.AuthService.changeDetails(this.user).subscribe(res => console.log(res));
+    this.AuthService.changeDetails(this.user).subscribe(res => this.AlertifyService.message('Details saved. Reload page or continue shopping'));
   }
 }

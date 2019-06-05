@@ -12252,11 +12252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\ShoeMe.Identity.API\\ShoeMe.Identity.API.csproj",
+      "projectUniqueName": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\shoeme.identity.api\\ShoeMe.Identity.API.csproj",
       "projectName": "ShoeMe.Identity.API",
-      "projectPath": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\ShoeMe.Identity.API\\ShoeMe.Identity.API.csproj",
+      "projectPath": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\shoeme.identity.api\\ShoeMe.Identity.API.csproj",
       "packagesPath": "C:\\Users\\Kent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\ShoeMe.Identity.API\\obj\\",
+      "outputPath": "C:\\Users\\Kent\\Desktop\\Coding\\apps\\ShoeMe\\shoeme.identity.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

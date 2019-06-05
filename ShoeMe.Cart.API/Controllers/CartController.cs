@@ -50,5 +50,16 @@ namespace ShoeMe.Cart.API.Controllers
             _context.SaveChanges();
             return item.CartId;
         }
+        [HttpPost("removeItem")]
+        public int removeItem([FromBody] int id)
+        {
+            var item = _context.CartItems.Where(i => i.Id == id).FirstOrDefault();
+            if (item != null)
+            {
+                _context.CartItems.Remove(item);
+                _context.SaveChanges();
+            }
+            return id;
+        }
     }
 }
