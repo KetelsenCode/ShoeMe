@@ -37,6 +37,7 @@ export class AuthService {
         let token = localStorage.getItem('token');
         let headers: HttpHeaders = new HttpHeaders();
         headers = headers.append('Authorization','Bearer ' + token);        
+                                                                                 //url query parameter, http req body, http req header
         return this.HttpClient.put('http://localhost:5000/api/auth/user-details/' + user.id, user,  {headers})
     }
 }
